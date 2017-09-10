@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>465</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>vboxstarter</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>461</width>
+      <height>251</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <property name="elideMode">
+     <enum>Qt::ElideLeft</enum>
+    </property>
+    <widget class="QWidget" name="vms">
+     <attribute name="title">
+      <string>Virtuella maskiner</string>
+     </attribute>
+     <widget class="QListWidget" name="listVms">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>211</width>
+        <height>211</height>
+       </rect>
+      </property>
+      <property name="viewMode">
+       <enum>QListView::ListMode</enum>
+      </property>
+      <property name="modelColumn">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnStartStop">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>180</y>
+        <width>92</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Starta</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnConnectRDP">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>180</y>
+        <width>92</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Anslut</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTextBrowser" name="lblVMDescription">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>0</y>
+        <width>241</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="openLinks">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="users">
+     <attribute name="title">
+      <string>Inloggade användare</string>
+     </attribute>
+     <widget class="QListWidget" name="listUsers">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>121</width>
+        <height>191</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>4</y>
+        <width>101</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Aktiva användare</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="settings">
+     <attribute name="title">
+      <string>Inställningar</string>
+     </attribute>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>14</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Server</string>
+      </property>
+      <property name="buddy">
+       <cstring>txtServerURL</cstring>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>14</y>
+        <width>55</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Anv.namn</string>
+      </property>
+      <property name="buddy">
+       <cstring>txtUserName</cstring>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>375</x>
+        <y>15</y>
+        <width>55</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SSH port</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtServerURL">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>30</y>
+        <width>261</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtUserName">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>30</y>
+        <width>91</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>104</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>RDP program</string>
+      </property>
+      <property name="buddy">
+       <cstring>txtRdpProgram</cstring>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtRdpProgram">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>120</y>
+        <width>431</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>171</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Startkommando på servern</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnSaveSettings">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>180</y>
+        <width>92</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Spara</string>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="txtServerCmd">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>165</y>
+        <width>311</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QSpinBox" name="spinPort">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>30</y>
+        <width>71</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>10000</number>
+      </property>
+      <property name="value">
+       <number>22</number>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtKeyFilePrivate">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>75</y>
+        <width>151</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Privat SSH nyckelfil</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnFileBrowsePrivate">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>75</y>
+        <width>71</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Bläddra</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>60</y>
+        <width>121</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Publik SSH nyckelfil</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="txtKeyFilePublic">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>75</y>
+        <width>151</width>
+        <height>23</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btnFileBrowsePublic">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>75</y>
+        <width>71</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Bläddra</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btnConnect">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>101</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Koppla upp</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblMainStatus">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>0</y>
+      <width>301</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Nedkopplad</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="buddy">
+     <cstring>btnConnect</cstring>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>btnConnect</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>listVms</tabstop>
+  <tabstop>lblVMDescription</tabstop>
+  <tabstop>btnStartStop</tabstop>
+  <tabstop>btnConnectRDP</tabstop>
+  <tabstop>listUsers</tabstop>
+  <tabstop>txtServerURL</tabstop>
+  <tabstop>txtUserName</tabstop>
+  <tabstop>spinPort</tabstop>
+  <tabstop>txtKeyFilePrivate</tabstop>
+  <tabstop>btnFileBrowsePrivate</tabstop>
+  <tabstop>txtKeyFilePublic</tabstop>
+  <tabstop>btnFileBrowsePublic</tabstop>
+  <tabstop>txtRdpProgram</tabstop>
+  <tabstop>txtServerCmd</tabstop>
+  <tabstop>btnSaveSettings</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

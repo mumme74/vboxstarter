@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="pause.png">resources/Pause-Pressed-icon.png</file>
+        <file alias="play.png">resources/Play-1-Hot-icon.png</file>
+        <file alias="pending.png">resources/Eject-Pressed-icon.png</file>
+    </qresource>
+</RCC>
